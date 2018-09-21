@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+</head>
+<body>
+        <section class="hero is-primary">
+                <div class="hero-body">
+                  <div class="container">
+                    <h1 class="title">
+                    <center>Forget password</center> 
+                    </h1>
+                    
+                  </div>
+                </div>
+              </section>
+
+              <section class="section">
+                  <div class="container">
+                      <p id="show"></p>
+                        <input class="input" type="text" id="for" placeholder="E-mail"><br><br>
+                  <a class="button is-link" onclick="check00()">SENT TO MAIL</a>
+                  <a class="button is-link" href="index.html">BACK</a>
+                  </div>
+                  
+              </section>
+              <script>
+                  var an = document.getElementById("for").value;
+                  var ch = an.includes(".com",0);
+              function check00(){
+                  if(ch){
+                    document.getElementById("show").innerHTML = "Success";
+                  }else{
+                    document.getElementById("show").innerHTML = "Fail";
+                  }
+              }
+              </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+</head>
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+            <center>Login</center> 
+            </h1>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+           <div class="columns">
+            <div class="column">
+                <p id="Failall"></p>
+                <h1>UserName</h1>
+                <input class="input" type="text" id="username" placeholder="name">
+                     
+                <h1>Password</h1>
+                <input class="input" type="text" id="pass1" placeholder="password">
+                
+                <h1>AutoBot</h1>
+                <input class="input" type="text" id="checknum" placeholder="Fill Number">
+
+               <a href="forget.html">Forget Password</a>
+             </div> 
+            
+                    
+                 
+           </div>   <a class="button is-link is-large" onclick="check()" id="click">Enter</a>      
+        </div>
+    
+      </section>
+    <script>
+      var fil = (parseInt(Math.random()*10000));
+        document.getElementById("checknum").setAttribute("placeholder",fil)
+          var namee = document.getElementById("username").value;
+          var passwordd = document.getElementById("pass1").value;
+          var checkn = document.getElementById("checknum").value;
+          var num =fil.toString();
+         function check(){
+             var count =0;
+             if(namee=='admin'){
+                 count++;
+             }
+
+             if(passwordd=='1234'){
+                 count++;
+             }
+
+             if(checkn==""){
+                 count++;
+             }
+             console.log(count);
+             if (count==3){
+            document.getElementById("click").setAttribute("href","success.html");
+          }else{
+            
+            
+          }
+         }
+            
+          </script>
+      
+</body>
+</html>
